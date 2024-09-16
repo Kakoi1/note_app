@@ -1,0 +1,168 @@
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    
+    
+    
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+} 
+
+
+
+    body {
+      background-image: url('image/note.png');
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    /* @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+  } */
+  
+  h1 {
+      animation: bounce 1s infinite;
+      text-align: center;
+  }
+    
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+    
+    .note {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .note h3 {
+      margin-top: 0;
+    }
+    
+    .note p {
+      margin-bottom: 0;
+    }
+
+    .welcome-link {
+        color: #eed9d9;
+        text-decoration: none;
+        margin-right: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #333;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+      
+      .welcome-link:hover {
+        background-color: #333;
+        color: white;
+      }
+
+
+
+      /* Style for the shelf */
+
+
+/* Style for the notes container */
+.shelf {
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  background-color: #EEF5FF;
+}
+
+.notes-container {
+
+  word-wrap: normal;
+  
+  margin: 20px;
+ text-align: left;
+}
+
+.note {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+.add-note-container {
+  margin: 50px;
+  min-height: auto;
+  float: right;
+}
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
