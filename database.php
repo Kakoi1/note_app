@@ -14,6 +14,6 @@ if (!$conn) {
 // Your code for queries here
 
 // Close the connection when done
-mysqli_close($conn);
+
 
 ?>
