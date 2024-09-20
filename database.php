@@ -1,20 +1,25 @@
 <?php
+require 'vendor/autoload.php';
 
-$hostName = "localhost";
-$dbUser = "root";
-$dbPassword = "";
-$dbName = "login_register";
-$port = 3306; // Default MySQL port
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-$conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName, $port);
+// Get environment variables
+$host = $_ENV['DB_HOST'];
+$port = $_ENV['DB_PORT'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
+$dbname = $_ENV['DB_NAME'];
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+// Create connection
+$conn = new mysqli($host, $user, $pass, $dbname, $port);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+echo "Connected successfully";
 
-// Your code for queries here
-
-// Close the connection when done
-mysqli_close($conn);
-
-?>
+// Close the connection when done (optional)
+// $conn->close();
