@@ -6,14 +6,13 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Get environment variables
-$host = $_ENV['DB_HOST'];
-$port = $_ENV['DB_PORT'];
-$user = $_ENV['DB_USER'];
-$pass = $_ENV['DB_PASS'];
-$dbname = $_ENV['DB_NAME'];
-
-// Create connection
-$conn = new mysqli($host, $user, $pass, $dbname, $port);
+    $conn = mysqli_connect(
+        getenv("DB_HOST"),
+        getenv("DB_USERNAME"),
+        getenv("DB_PASSWORD"),
+        getenv("DB_DATABASE"),
+        getenv("DB_PORT") ? : "3306"
+    );
 
 // Check connection
 if ($conn->connect_error) {
