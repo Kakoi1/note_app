@@ -1,10 +1,4 @@
 <?php
-require 'vendor/autoload.php';
-
-// Load environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
 // Get environment variables
 $host = $_ENV['DB_HOST'];
 $port = $_ENV['DB_PORT'];
