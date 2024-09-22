@@ -1,4 +1,4 @@
-
+<?php
 $conn = mysqli_connect(
     getenv('DB_HOST'),       // Database host (e.g., localhost or the Coolify server)
     getenv('DB_USERNAME'),   // Database username
@@ -10,3 +10,4 @@ $conn = mysqli_connect(
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+?>
